@@ -23,8 +23,6 @@
     "gatsby-remark-responsive-iframe": "^4.6.0",
     "gatsby-remark-smartypants": "^4.6.0",
     "gatsby-source-filesystem": "^3.9.0",
-    "gatsby-theme-blog": "^3.0.0",
-    "gatsby-theme-blog-darkmode": "^3.0.0",
     "gatsby-transformer-remark": "^4.6.0",
     "gatsby-transformer-sharp": "^3.9.0",
     "prismjs": "^1.24.1",
