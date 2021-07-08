@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `chand1012.dev`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Chandler Lofland`,
+      summary: `My blog about code and computers.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://www.chand1012.dev/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `chand1012Dev`,
+      url: 'https://twitter.com/chand1012Dev'
     },
   },
   plugins: [
@@ -50,6 +51,8 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-theme-blog`, 
+    `gatsby-theme-blog-darkmode`,
     `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
