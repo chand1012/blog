@@ -54,12 +54,12 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-primary: #4180aa;
+  --color-text: #ffffff;
+  --color-text-light: #E2E2E2;
+  --color-heading: #808080;
+  --color-heading-black: white;
+  --color-accent: #808080;
 }
 
 /* HTML elements */
@@ -75,6 +75,7 @@ html {
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #222;
 }
 
 body {
