@@ -8,8 +8,13 @@ module.exports = {
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://www.chand1012.dev/`,
     social: {
-      twitter: `chand1012Dev`,
-      url: 'https://twitter.com/chand1012Dev'
+      twitter: `Chand1012Dev`,
+      instagram: 'chand1012',
+      youtube: 'channel/UCRKeF9dxhScFwB4VyOqxkhQ',
+      github: 'chand1012',
+      twitch: 'chand1012',
+      devTo: 'chand1012',
+      
     },
   },
   plugins: [
