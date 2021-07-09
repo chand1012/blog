@@ -38,8 +38,8 @@
   --fontWeight-medium: 500;
   --fontWeight-semibold: 600;
   --fontWeight-bold: 700;
-  --fontWeight-extrabold: 800;
-  --fontWeight-black: 900;
+  --fontWeight-extrabold: 700;
+  --fontWeight-black: 600;
   --fontSize-root: 16px;
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
@@ -54,10 +54,10 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #4180aa;
+  --color-primary: #8EB1D9;
   --color-text: #ffffff;
   --color-text-light: #E2E2E2;
-  --color-heading: #808080;
+  --color-heading: white;
   --color-heading-black: white;
   --color-accent: #808080;
 }
@@ -168,7 +168,7 @@ p {
   padding: var(--spacing-0);
 }
 
-ul,
+ul
 ol {
   margin-left: var(--spacing-0);
   margin-right: var(--spacing-0);
@@ -247,7 +247,7 @@ a:focus {
   padding: var(--spacing-10) var(--spacing-5);
 }
 
-.global-wrapper[data-is-root-path="true"] .bio {
+.global-wrapper[data-is-root-path="true"] {
   margin-bottom: var(--spacing-20);
 }
 
@@ -289,7 +289,7 @@ a:focus {
 
 .bio {
   display: flex;
-  margin-bottom: var(--spacing-16);
+  margin-bottom: var(--spacing-4);
 }
 
 .bio p {
@@ -319,6 +319,15 @@ a:focus {
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }
+
+.social {
+  margin-bottom: var(--spacing-10)
+}
+
+.readMore {
+  margin-top: var(--spacing-4)
+}
+
 
 /* Media queries */
 

@@ -54,6 +54,9 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
+                <Link to={post.fields.slug} itemProp="url">
+                    <p className="readMore" >Read More</p>
+                </Link>
               </article>
             </li>
           )

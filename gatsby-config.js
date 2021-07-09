@@ -110,7 +110,7 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
+            output: "/feed.xml",
           },
         ],
       },
