@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `chand1012.dev`,
+    title: `Chandler's Dev Blog`,
     author: {
       name: `Chandler Lofland`,
       summary: `My blog about code and computers.`,
@@ -118,13 +118,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Chandler's Dev Blog`,
+        short_name: `chand1012.dev`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/profile-pic.jpg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
