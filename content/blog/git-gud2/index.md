@@ -15,7 +15,7 @@ There are two things in that picture I don't like. First of all, the original au
 
 In my [previous Git tutorial](https://chand1012.dev/git-gud1/), I mentioned the `git rebase` command. We will be doing this again, but with slightly different syntax and process. In the original example, I used the command in the following form: `git rebase -i da82519db9d38a142e09038edf9e7024846f1049`. This used the commit hash to go back to the commit I want to change. This would normally be acceptable, but I need to go *all* the way back to the beginning of the commit history. Fortunately, the repo in question only has nine commits total, so this won't be hard in this case, but for larger repos, this process could take a long time. 
 
-```Bash
+```bash
 git rebase --root -i
 ```
 
@@ -49,7 +49,7 @@ Save and close the file. This will conclude the rebase and fixing your commit me
 
 Finally, force push to the repo:
 
-```Bash
+```bash
 git push -f origin master
 ```
 

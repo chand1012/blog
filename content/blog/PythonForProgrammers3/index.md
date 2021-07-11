@@ -16,7 +16,7 @@ Also I know Python calls them methods but I use "methods" and "function" interch
 
 There is something I omitted from the last article that you experienced object-oriented programmers and hackers would probably be in anguish without: classes. Classes are very engrained in Python's nature. Creating a class can be done like so. 
 
-```Python
+```python
 # This file is named "dogs.py"
 
 class Dog:
@@ -81,7 +81,7 @@ if __name__=="__main__": # Only run if the file is being explicitly ran as a scr
 
 Instance variables can be defined in functions with `self.<var name>`, and I prefer to define all the ones that I will be using in the `__init__` method for my own organization. Class variables are defined outside of methods and are shared between all functions, even when changed. For example, If I were to change Murphy's genus to 'cat' or something absurd, Champions' genus would change as well. Also, classes can inherit other classes. Here is an example, assuming that the previous class-related code was imported previously.
 
-```Python
+```python
 
 from dogs import Dog 
 
@@ -105,7 +105,7 @@ if marley.is_purebred():
 
 In this example, I imported some of the previously written code. When you call the `import` statement, Python searches in a few places for your code. The places that it searches are called the `PYTHONPATH`, and your current directory is included. When you import another file in Python, the filename is omitted. Here is another import example:
 
-```Python
+```python
 import os
 
 from dogs import Dog
@@ -120,7 +120,7 @@ In this import example, the standard library module `os` was used. This module g
 
 The order for imports, while not enforced, usually goes like this:
 
-```Python
+```python
 import standard_library
 
 import pypi_module

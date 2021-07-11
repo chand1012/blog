@@ -55,7 +55,7 @@ nano app.py
 
 Then enter the following code in the script
 
-```Python
+```python
 from flask import Flask
 
 app = Flask(__name__)

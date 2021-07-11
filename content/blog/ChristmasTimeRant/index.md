@@ -7,7 +7,7 @@ Christmas time is a time of joy, family, giving, and life. Unless its 2020.
 
 Jokes aside, there was always one thing about Christmas time that grinded my gears, and I think it can partially be portrayed with this meme:
 
-<img src="./techguymeme.png" height=400/>
+![](./techguymeme.png)
 
 This is especially true around Christmas time. When your Grandmother or some older member of your family gets a new piece of technology and as far as their concerned the only thing you study is "computers" so they assume you can help them. Well, I'm a programmer not the annoyed IT guy from your work. 
 

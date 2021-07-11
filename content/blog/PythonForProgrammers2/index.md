@@ -21,7 +21,7 @@ Loops, as we all know, are fundamental parts of programming. Now C/C++ has a fun
 
 These are for iterating. Examples of iterables in Python are lists, strings, ranges, and dictionaries. There are more, but these are the examples I will be using. The example I see most is looping through a list of items, which I always call and array because of JavaScript and C. This is as simple as this:
 
-```Python
+```python
 
 dogs = ['Murphy', 'Champion', 'Marley']
 
@@ -32,7 +32,7 @@ for dog in dogs:
 
 That's it. You have just iterated over all the dogs. This will print each dog line-by-line. Yes, it is that simple. If you want to do this the old-fashioned way, you are more than welcome to, its just not considered the "Pythonic" way:
 
-```Python
+```python
 
 dogs = ['Murphy', 'Champion', 'Marley']
 
@@ -47,7 +47,7 @@ for i in range(len(dogs)):
 
 You can do the same with strings and dictionaries. Dictionaries do require an extra step though:
 
-```Python
+```python
 
 breeds = {
     "Murphy": "German Shepard",
@@ -74,7 +74,7 @@ for key, value in breeds.items():
 
 While loops are arguably simpler. They are the same as C: `while <conditional>`. The most common use of a `while` loop in Python you will see is the `while True` loop which is just the same as it is in other languages: an endless loop. Like C/C++, you just use the `break` keyword to escape it, which also works in `for` loops if needed. Example:
 
-```Python
+```python
 
 counter = 0
 
@@ -92,7 +92,7 @@ Quick side note: Python has a few shortcut operators, like from C: `+=` adds and
 
 Now this same loop can be achieved with less code, like so:
 
-```Python
+```python
 
 counter = 0
 
@@ -108,7 +108,7 @@ But `break` has its uses. `Break` can also be used to escape `for` loops before 
 
 The `continue` statement also has its roots in C. It does the same thing as it does in most other languages: skips the rest of the loop and starts the next iteration. Here is an example of that:
 
-```Python
+```python
 
 breeds = {
     "Murphy": "German Shepard",
@@ -132,7 +132,7 @@ for key in breeds:
 
 Python uses a mix of conditionals from C and a few of its own. For example, the statements `==`, `!=`, `<=`, and `>=` are all perfectly valid in Python. These all compare the values of the items in question. Python also adds `is`, as previously shown, and `in`. The `in` keyword can either be used with iterators or as a conditional. You have already seen how it can be used with loops, but here is an example of it used as a conditional:
 
-```Python
+```python
 
 # the colors of the dogs!
 colors = ['black', 'brown', 'white']
@@ -149,7 +149,7 @@ if 'own' in color:
 
 The `in` statement works with strings, lists, dictionaries, and a few others. The conditional statement `is` compares identity rather than value. When I say `identity`, I mean type and value, so for example:
 
-```Python
+```python
 
 # these are mathematically the same
 x = 7
@@ -169,7 +169,7 @@ The output would be `True`, `False`, `True`, `False`, `True`, `False`. While fro
 
 The next thing we should talk about is the logical operators: `not`, `and`, and `or`. Rather than using the symbols, Python shot for the most human readable way possible and just literally uses the English words for the code. The `not` operator is the same as `!` in every other language, and should be used as such. The `and` and `or` statements should be self explanatory. Here is an example of all three.
 
-```Python
+```python
 
 team = "team"
 
@@ -185,7 +185,7 @@ These will all print out `True`.
 
 In the last example of the Loops section, you see a simple use of an `if` statement in Python. In Python, the three `if` statement keywords are `if`, `elif`, and `else`, with `elif` being the equivalent to most other languages' `else if`. Here is an example of an `if..elif..else` statement.
 
-```Python
+```python
 # I will discuss imports in part 3
 # for now just know that I needed this
 # for my example. This is math functions.
@@ -207,7 +207,7 @@ The `elif` statement can be used as many times as you want in an `if..elif..else
 
 Methods, or as they are known in other programming languages, Functions, are a quintessential part of the programming paradigm. Functions in Python are not similar to C, but more similar to JavaScript, in the sense that type of the input and output variables is not set. Python functions can be created before or after the code that calls them, and they can be used recursively. Here are a few examples of them.
 
-```Python
+```python
 
 # simple square function
 def square(x):

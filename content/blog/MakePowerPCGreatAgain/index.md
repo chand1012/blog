@@ -7,7 +7,7 @@ Back when Apple didn't try and screw over anyone with a broken iMac, back before
 
 A few months ago, I acquired an old PowerMac G5 from a local e-waste event, for free. The specific model I got was the lowest end PowerMac you could get from late-2004. It has 1GB of RAM (max of 4GB), has a single-core PowerPC 970FX CPU, and has a NVIDIA GeForce FX 5200 Ultra GPU. The system had no hard drive when I got it, so I threw in a 3.5" 80GB drive I had laying around and got to work on getting something to run.
 
-![Imgur](https://i.imgur.com/zXArucS.jpg?1)
+![Imgur](./neofetch.jpg)
 
 As the hard drive was blank (or it had a non-Power compatible OS, I had no clue what was on it), I first installed an operating system. The disk drive, though a standard drive that you would see on a non-Apple PC, could only be opened from outside the case through software. Luckily this is a common issue, and the forum post I found recommended pushing the flap that covered the drive down and pressing the physical button with a bent paper clip. I downloaded the net installer for Debian 7, as I found it was the only disc that would boot on the Mac for some reason, even after trying the minimal install, which was just a command line with Ethernet drivers. After installing Debian 7, I got stuck pretty quick on finding any software to run. The internet browser was old and outdated, the latest officially supported version of any Java JRE or JDK was version 7, and finally nothing would compile as the GNU C and C++ compilers were way out of date. So I turned my focus on another project of mine for a few months.
 
@@ -21,7 +21,7 @@ After doing more research, it turned out that IBM had their own Java port, and o
 
 So I decided to check what the sysbench time was on the CPU. I ran the test four times, once on the PowerMac, once on my personal gaming PC, once on my Raspberry Pi, and finally once on a friend of mine's 24 thread server machine. The results are as follows:
 
-![Benchmarks](https://i.imgur.com/sWWPFuv.png)
+![Benchmarks](./benchmarks.png)
 
 All were benchmarked with the sysbench CPU prime test, with all their threads used, and with a max of 20,000 numbers. Top left is the PowerMac, top right is the Pi, Bottom left is my Ryzen 5 2600x PC with 6 cores and 12 threads, and bottom right was the server running dual Xeon x5670 with 12 cores and 24 threads. As you can see, my current PC has the fastest time with 2.104 seconds, and since it was running on the Linux subsystem for Windows, it could be even faster if running natively. The Xeon is running on top of a virtualization layer, so it to would be faster if native. The Pi, with its 4 ARM cores managed a time of 92 seconds, with no overclock and only a heatsink to cool it off. This is about the time I would expect an older Pentium 4 or some similar x86 processor to achieve. The PowerPC was a stark disappointment. It took over 200 seconds for it to complete the test, making it statistically the least powerful machine used.
 

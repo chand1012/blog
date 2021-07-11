@@ -14,42 +14,42 @@ Say you're like me, and you tend to make a lot of spelling errors. I make so man
 
 For this example, I will be squashing three commits down to one. Here is a screenshot of the list of commits on [GitHub](https://github.com/chand1012/Discord-Tweet-Bot):
 
-![Commits](https://i.imgur.com/g3WxpJP.png)
+![Commits](./commits.png)
 
 These will show as one commit to the user. First, clone and change into the directory:
 
-```Bash
+```bash
 git clone https://github.com/chand1012/Discord-Tweet-Bot.git
 cd Discord-Tweet-Bot
 ```
 
 After this, you will need to run the `git rebase` command, which allows us to squash as many commits as we want down to just one. GitHub will show us a list of commits that we squashed into the single commit. We can see this after the process is done. First, get the commit hash of the commit before the one you wish to squash back to. For this example, it was the last hash in the example:
 
-```Bash
+```bash
 git rebase -i da82519db9d38a142e09038edf9e7024846f1049
 ```
 
 You will come to a file in `nano` that looks like this:
 
-![Nano](https://i.imgur.com/Qm5jTJ2.png)
+![Nano](./nano.png)
 
 If you are squashing the previous commits the top commit must remain the same. For this example, we will squash the bottom two. Change the file so all of the first word of the line, `pick`, is changed to either `squash` or the letter `s`. This will squash the commits down to just one, retaining the commit messages as one long commit message. Here is what the file looked like for me:
 
-![Squash](https://i.imgur.com/7Wl3g7r.png)
+![Squash](./squash.png)
 
 Press `Ctrl-X` to save this file. You will them come to the file for the long commit message. I usually leave mine the same, but you can edit this file as you please. I leave mine the same, as it gives me a list of my (possible pretty useless) commit messages. Press `Ctrl-X` again when you are done. 
 
-![Commits](https://i.imgur.com/MPZSiXY.png?1)
+![Commits](./commits2.png)
 
 After you finish that, you can push your new changes. To do this, you have to do a "force push". Otherwise, GitHub will see you have less commits and think you are on an older version of the repo. This can be achieved with the following:
 
-```
+```bash
 git push -f 
 ```
 
 Now the commit history looks like this:
 
-![New History](https://i.imgur.com/G4JwPlP.png)
+![New History](./new_history.png)
 
 You can also look at extended commit message, which is now a mash of all of the old commit messages, [here](https://github.com/chand1012/Discord-Tweet-Bot/commit/ad21aa628932576de85fea82465081b9e92ef734).
 

@@ -7,37 +7,34 @@ I recently started working on a few major NodeJS project, and found that install
 
 First, install whatever versions of NodeJS and NPM are available in your distro's package manager. For example, this is how you would install on Ubuntu 20.04.
 
-```Bash
+```bash
 sudo apt update
 sudo apt install nodejs npm
 ```
 
 This would be the command for Arch Linux.
 
-```Bash
+```bash
 sudo pacman -Syu nodejs npm
-```
-
-```Bash
 ```
 
 This will install a (probably) outdated version of NodeJS and NPM. 
 
 Next, you need to update NPM. To update NPM, simply run the following.
 
-```Bash
+```bash
 sudo npm i -g npm
 ```
 
 Then, install the package [`n`](https://www.npmjs.com/package/n). This is a nice NodeJS installation manager similar to Ruby's [RVM](https://rvm.io/).
 
-```Bash
+```bash
 sudo npm i -g n
 ```
 
 To use `n` to install the latest or latest long-term support version of Node.
 
-```Bash
+```bash
 sudo n latest # for the newest version
 sudo n lts # for the latest LTS
 ```

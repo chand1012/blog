@@ -11,7 +11,7 @@ Ever since I started programming, high-level languages, like Python, Ruby, and L
 
 I attempted to avoid most statically-typed and/or compiled languages as my coding style was, while not sloppy, was also not anything close to standard. Take this code for example:
 
-```Python
+```python
 thing = None
 a = 1
 
@@ -24,7 +24,7 @@ else:
 
 In most low-level or compiled languages, Golang included, this is horribly taboo. This is because Python is a dynamically typed language, as most interpreted languages are. This is because variables can hold all types, which is why they are called dynamic. When you declare a variable in Go, while you can declare a variable without declaring its type, as the compiler can differentiate what the type is supposed to be, the type must remain the same for the duration of the scope, like so:
 
-```Go
+```go
 package main
 import "fmt"
 
@@ -43,7 +43,7 @@ func main(){
 
 This will execute, but that is because the variable `i` is used in two different scopes. The variable used in the loop was defined at the start of the scope, you would have to keep it as whatever that type was. For example:
 
-```Go
+```go
 package main
 import "fmt"
 
@@ -73,7 +73,7 @@ func main {
 
 Another thing that tripped me up a lot is that you cannot have unused variables in your Go code. If you have code like so:
 
-```Go
+```go
 package main
 import "fmt"
 
@@ -91,7 +91,7 @@ Python tends to hide memory management from its users. This is in an effort to m
 
 Pointers in Go operate exactly like they do in C. If you want to read more about pointers, [here](https://beginnersbook.com/2014/01/c-pointers/) is a good example in C that transfers well to Go. The easiest way to think of pointers is what they are, an address. They "point" to a value in your computer's memory. They are also a really good way to escape scope. They allow you to pass a global variable into the function as a parameter and be changed in the function. If a pointer is not used, the function outside the variable is unchanged. Here is an example from the linked article but translated into Golang:
 
-```Go
+```go
 package main
 import "fmt"
 import "strconv"
@@ -116,7 +116,7 @@ This allows the variable in the `main` scope to be changed by the `salaryhike` f
 
 One thing that Python has in its standard library is a system for multithreading, though its not very intuitive. Go includes an intuitive way to multithread your programs and to correctly funnel data between them. Those two things are called goroutines and channels respectively. Goroutines, called coroutines in literally every other language, are an easy way to asynchronously execute a function or a set of functions. All you have to do is put the keyword `go` before calling the function to start execution of the function while starting execution of the next command. For example:
 
-```Go
+```go
 package main
 import "fmt"
 import "time"
@@ -137,7 +137,7 @@ func main() {
 
 This will quickly and effectively allow for coroutines in your programs. If you have to execute the same function a few times, all you do is call `go` a few times with the function in a loop like so:
 
-```Go
+```go
 package main
 import "fmt"
 import "time"
@@ -161,7 +161,7 @@ func main() {
 
 Now, it is **really** bad practice as a developer to have multiple threads write to the same variable at the same time. At best, the data gets a little corrupted but the program keeps chugging. At worst, one of the threads has a `segmentation fault`, or an error in memory reads and writes, which will crash the entire program. Go remedies this by providing channels to funnel data between the threads. When you request a variable from a channel, it gets the oldest value added and continues your program. The channel isn't ready to read or write, execution will pause until the channel is complete being written to or until the channel is ready to send your data to a variable. A nice little website called [Go By Example](https://gobyexample.com) has a better way of explaining basically everything on this page, and I highly recommend you go and check out that site for more Go stuff, but for now I am going to borrow the part the site about using channels as a tool to better organize your goroutines. First I will show you his example from [here](https://gobyexample.com/channel-synchronization) and explain a little better after you look over it:
 
-```Go
+```go
 package main
 
 import "fmt"
@@ -186,7 +186,7 @@ func main() {
 
 By default, channels will pause your program until they have data to read from, in this case that data is a boolean value. This is considered the "old" way. The "new" and "recommended" way (which I myself follow) uses the `sync` module. Instead of having a separate channel for the status of the thread, you pass a pointer to a variable of the type `sync.WaitGroup` into the worker and defer the command `wg.Done()` like so:
 
-```Go
+```go
 package main
 
 import (

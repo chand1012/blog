@@ -11,7 +11,7 @@ This series will assume you are familiar with some form of a computer language a
 
 The introduction into any computer language starts with printing out `Hello World!`, no matter how uncomplicated or complicated it is. In Python, we need only one line:
 
-```Python
+```python
 print("Hello World!")
 ```
 
@@ -21,7 +21,7 @@ To execute this Python script, let's call it `hello.py`, just type `python hello
 
 That's it. There are no libraries to import, no extra function calls, no semicolon, none of that. Let's do the same thing with a variable so you know how those work in Python:
 
-```Python
+```python
 name = "Chandler"
 
 print(f"Hello, {name}!")
@@ -29,7 +29,7 @@ print(f"Hello, {name}!")
 
 For variables in Python, you just specify the name and then an equal sign, along with the data being stored. Unlike statically typed languages, this can be any value that Python knows how to handle, and the type is not required as that is determined at runtime. The basic types in Python (i.e. The ones that you don't need objects for) are strings, integers, floats, lists (arrays), dictionaries (literally just JSON), complex numbers, and booleans, and null which is called `None` in Python. Here is an example of each in use:
 
-```Python
+```python
 # string
 # edit: single and double quotes are
 # both acceptable
@@ -72,7 +72,7 @@ complex_state = complex(2, -5)
 
 Converting between strings, integers, and floats is easy. Basic arithmetic is also the same as most other languages. Here are a few options:
 
-```Python
+```python
 
 x = 12
 y = 5.5
@@ -111,7 +111,7 @@ divide_by_zero = x / 0
 
 You can also get all of the keys or all of the values of a dictionary as a list, like so:
 
-```Python
+```python
 
 # dictionary
 body_parts = {
@@ -129,7 +129,7 @@ values = list(body_parts.values())
 
 There is two other data types that is included in Python's standard library that we should mention: tuples and ranges. Tuples are essentially just immutable lists, as in they are a list that cannot be changed after being defined. Everything else about them is the same, they index at one, individual variables are access using the same method as lists, and they can accept any type. They can be converted to lists by passing them into the `list(x)` function. Ranges are a way to generate lists of numbers. By default, a range is its own data type, but they can be converted to lists same as tuples. They have three initialization variables, but this also depends on how you generate the range. Here are a few examples from Python's [official documentation](https://docs.python.org/3/library/stdtypes.html?highlight=range#range):
 
-```Python
+```python
 >>> list(range(10))
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 >>> list(range(1, 11))
@@ -148,7 +148,7 @@ There is two other data types that is included in Python's standard library that
 
 The ending number is always omitted. This can be used to form loops, which we will go into more detail in the next article. Here is a small example:
 
-```Python
+```python
 for i in range(10):
     print(f'This is the {i+1} loop')
 
