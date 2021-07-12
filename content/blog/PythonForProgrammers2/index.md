@@ -201,7 +201,7 @@ else:
     print("x is odd.")
 ```
 
-The `elif` statement can be used as many times as you want in an `if..elif..else` block. If you were to say have three `if` statement in a row with an `if..elif..else` block at the end, it would have significantly different behavior than if I were to use an `if..elif..elif..elif..elif..else` block. The three `if` statements would be assumed to all be apart of separate logic, just as if you were to do the same in C. There is no `switch` statements in Python, so if you have a situation where you would use them, you may just be using an `if` statement with a lot of `elif`s mixed in.
+The `elif` statement can be used as many times as you want in an `if..elif..else` block. If you were to say have three `if` statement in a row with an `if..elif..else` block at the end, it would have significantly different behavior than if I were to use an `if..elif..elif..elif..elif..else` block. The three `if` statements would be assumed to all be apart of separate logic, just as if you were to do the same in C. There is no `switch` statements in Python ([yet!](https://towardsdatascience.com/switch-case-statements-are-coming-to-python-d0caf7b2bfd3)), so if you have a situation where you would use them, you may just be using an `if` statement with a lot of `elif`s mixed in.
 
 # Methods (Functions)
 
@@ -225,6 +225,31 @@ def print_10_times(a_string):
     for _ in range(10):
         print(a_string)
 
+# more than one return
+def return_two_things(x)
+    squared = x*x
+    cubed = x*x*x
+    return squared, cubed
+
+
+# using the functions
+
+a = square(10)
+
+print(a)
+
+six_four = recursive_power(4, 4)
+
+print(six_four)
+
+print_ten_times("hello world!")
+
+# this will return a tuple of the responses
+tuple_return = return_two_things(2)
+
+# this will deconstruct the tuple
+# to sq and cb in order
+sq, cb = return_two_things(2)
 ```
 
 There is one thing to be discussed that I did in the `for` loop, which is the use of the underscore as the variable to be used when iterated. It is common practice in Python, and most other languages, to use this variable as a sort of "I don't care" variable for values that can be ignored. In some languages it is a reserved keyword and can only be used for that purpose, such as in Golang, but in Python, its actually just a variable, and could be called upon if used as a standard variable. 

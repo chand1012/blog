@@ -15,11 +15,11 @@ The introduction into any computer language starts with printing out `Hello Worl
 print("Hello World!")
 ```
 
-To execute this Python script, let's call it `hello.py`, just type `python hello.py` while in the same directory in your terminal as the script.
+To execute this Python script, let's call it `hello.py`, just type `python hello.py` while in the same directory in your terminal as the script. That's it. There are no libraries to import, no extra function calls, no semicolon, none of that.
 
 # Variables.
 
-That's it. There are no libraries to import, no extra function calls, no semicolon, none of that. Let's do the same thing with a variable so you know how those work in Python:
+Let's do the same thing with a variable so you know how those work in Python:
 
 ```python
 name = "Chandler"
@@ -66,6 +66,9 @@ complex_state = 2-5j
 # can also be annotated like so
 complex_state = complex(2, -5)
 
+# capitalized like booleans
+flaws = None 
+
 ```
 
 # Converting Between Types
@@ -86,7 +89,7 @@ str_of_y = 'y is ' + str(y)
 format_str_x = f'x is {x}'
 format_str_y = f'y is {y}'
 
-# this would not work
+# this will not work
 test = 'x is ' + x
 
 # arithmetic between integers and floats can be done
@@ -127,7 +130,7 @@ values = list(body_parts.values())
 
 ```
 
-There is two other data types that is included in Python's standard library that we should mention: tuples and ranges. Tuples are essentially just immutable lists, as in they are a list that cannot be changed after being defined. Everything else about them is the same, they index at one, individual variables are access using the same method as lists, and they can accept any type. They can be converted to lists by passing them into the `list(x)` function. Ranges are a way to generate lists of numbers. By default, a range is its own data type, but they can be converted to lists same as tuples. They have three initialization variables, but this also depends on how you generate the range. Here are a few examples from Python's [official documentation](https://docs.python.org/3/library/stdtypes.html?highlight=range#range):
+There is two other data types that is included in Python's standard library that we should mention: tuples and ranges. Tuples are essentially just immutable lists, as in they are a list that cannot be changed after being defined. Everything else about them is the same, they index at zero, individual variables are access using the same method as lists, and they can accept any type. Functions can also output to tuples if they return more than one value (this will be covered later). They can be converted to lists by passing them into the `list(x)` function. Ranges are a way to generate lists of numbers. By default, a range is its own data type, but they can be converted to lists same as tuples. They have three initialization variables, but this also depends on how you generate the range. Here are a few examples from Python's [official documentation](https://docs.python.org/3/library/stdtypes.html?highlight=range#range):
 
 ```python
 >>> list(range(10))

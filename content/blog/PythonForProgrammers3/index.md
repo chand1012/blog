@@ -89,18 +89,18 @@ class Labrador(Dog):
     def is_purebred(self):
         return True
 
-if __name__=='__main__'
-# the class labrador would have the same 
-# methods, class vars and instance vars as
-# the previous dog class.
-marley = Labrador("Marley", 14)
-marley.bark()
-marley.set_parts()
-if marley.sheds():
-    print("Labs shed a lot.")
+if __name__=='__main__':
+    # the class labrador would have the same 
+    # methods, class vars and instance vars as
+    # the previous dog class.
+    marley = Labrador("Marley", 14)
+    marley.bark()
+    marley.set_parts()
+    if marley.sheds():
+        print("Labs shed a lot.")
 
-if marley.is_purebred():
-    print("This dog is pure!")
+    if marley.is_purebred():
+        print("This dog is pure!")
 ```
 
 In this example, I imported some of the previously written code. When you call the `import` statement, Python searches in a few places for your code. The places that it searches are called the `PYTHONPATH`, and your current directory is included. When you import another file in Python, the filename is omitted. Here is another import example:
