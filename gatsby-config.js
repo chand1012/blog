@@ -5,7 +5,7 @@ module.exports = {
       name: `Chandler Lofland`,
       summary: `My blog about code and computers.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `My blog about code and computers.`,
     siteUrl: `https://www.chand1012.dev/`,
     social: {
       twitter: `Chand1012Dev`,
