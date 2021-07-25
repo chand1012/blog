@@ -16,4 +16,12 @@ It is very important to know the hardware that you are installing Arch Linux to.
 
 ## Programs
 
-As previously stated **assume nothing that you need is installed**. This includes some *really* basic stuff, such as [`sudo`]() and a [DHCP Client]().
+As previously stated **assume nothing that you need is installed**. This includes some *really* basic stuff, such as [`sudo`](https://wiki.archlinux.org/title/Sudo), text editors like [`nano`](https://wiki.archlinux.org/title/Nano) and [`vim`](https://wiki.archlinux.org/title/Vim) and a [DHCP Client](https://wiki.archlinux.org/title/Network_configuration#DHCP). Now whether you need `sudo` can be up for debate, however most people are going to want it so they don't have to use root all the time. The DHCP Client, usually `dhcpcd`, is also something that most users will want unless Arch is getting a static IP. 
+
+A browser also isn't included, so either `firefox` or `chromium` is going to want to be included in the installation. If you want to get up and running fast, you *can* add all the programs you'll need while you are bootstrapping the OS (what `pacstrap` does), but its not recommended. Usually I get the OS booted and connected to the internet without the installer then install the recommended packages, but you can install some programs and a desktop environment quickly otherwise. 
+
+[Here](https://gist.github.com/chand1012/8658d07bd6dddf0a8c561059eed45d4f) is a list of packages that I have installed on my Arch system. I'm running KDE Plasma with the Materia Dark theme and Papirus Icons.
+
+And here is what it looks like.
+
+![My Arch Build](./desktop.png)
