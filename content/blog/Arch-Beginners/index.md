@@ -1,5 +1,5 @@
 ---
-date: "2021-08-01"
+date: "2021-07-26"
 title: Arch Beginner Advice
 description: Advice for those who want to start Arch Linux but can't seem to get it working.
 ---
