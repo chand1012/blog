@@ -27,9 +27,9 @@ If you want to get up and running fast, you *can* add all the programs you'll ne
 
 The guide also completely skips over the fact that you don't get a functioning desktop environment with Arch, nor do you get a display server to run it. You will have to install your respective video driver, as well as a display server, before you can set up a Display Manager and Desktop Environment. The driver will differ depending on your system, but all systems will need a Display Manager and a Desktop Environment (unless you're running an Arch server). The [Display Manager](https://wiki.archlinux.org/title/Display_manager) manages your selected desktop, as well as your user login. I use `sddm` as my Display Manager. Your Desktop Environment is what manages your desktop and programs. I as previously stated, I prefer KDE Plasma, but you should investigate your options and see which one looks the nicest to you. [Here](https://wiki.archlinux.org/title/Desktop_environment) is the Arch Linux wiki page on Desktop Environments. You will need a [graphics driver](https://wiki.archlinux.org/title/Category:Graphics) first, but the display server should install when you install the desktop environment.
 
-I'm running KDE Plasma with the Materia Dark theme, Papirus Icons, and Sierra Breeze Dark window decorations. Here's what it looks like.
+I'm running KDE Plasma with the Materia Dark theme, Papirus Icons, and Sierra Breeze Dark window decorations. More information can be found [here](https://www.reddit.com/r/unixporn/comments/p2eo9a/kde_plasma_i_like_my_widgets/). Here's what it looks like.
 
-![My Arch Build](./desktop.png)
+![My Arch Build](./desktop.jpg)
 ### Bootloader
 
 The article in question doesn't include anything but a link to the bootloader page of the Arch Wiki, and again assumes you'll know what you're doing. If you don't know what you're doing, GRUB is probably going to be what you want to use. Its the most common as well as the simplest to install. The [GRUB page](https://wiki.archlinux.org/title/GRUB) should give you enough information on how to install the program, but don't forget to generated the [main GRUB config](https://wiki.archlinux.org/title/GRUB#Generate_the_main_configuration_file).
