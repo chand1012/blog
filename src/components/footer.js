@@ -10,10 +10,10 @@ const Footer = () => {
             <div id="sponsors">
                 <span>My GitHub Sponsors:</span> <br/>
                 <a href="https://github.com/SvenWritesCode">
-                    <img style={{marginRight: 8}} src="https://avatars2.githubusercontent.com/u/7458951?s=460&u=f4826fe80efc759290675b6a4694ff4cf2a965fb&v=4" height="50" width="50"/>
+                    <img alt="Kyle" style={{marginRight: 8}} src="https://avatars2.githubusercontent.com/u/7458951?s=460&u=f4826fe80efc759290675b6a4694ff4cf2a965fb&v=4" height="50" width="50"/>
                 </a>
                 <a href="https://github.com/RusseII">
-                    <img style={{marginRight: 8}} src="https://avatars.githubusercontent.com/u/15036618?v=4" height="50" width="50"/>
+                    <img alt="Russell" style={{marginRight: 8}} src="https://avatars.githubusercontent.com/u/15036618?v=4" height="50" width="50"/>
                 </a>
             </div>
         </footer>

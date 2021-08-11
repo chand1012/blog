@@ -9,7 +9,14 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import { Badge, Tooltip } from "@material-ui/core";
+
+import { useLive } from "../services/live"
+
 const Bio = () => {
+  const { data: liveData, isLoading } = useLive();
+
+
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -142,11 +149,40 @@ const Bio = () => {
 
     return null
   }
-  return (
-    <React.Fragment>
-      <div className="bio">
-        <a href="https://github.com/chand1012">
-          <StaticImage
+
+  const BioImg = () => {
+
+    // badge anchor origin
+    const badgeAnchorOrigin = {
+      vertical: "top",
+      horizontal: "left",
+    };
+
+    const title = liveData?.title;
+
+    if (!isLoading && title) {
+      return (
+        <Tooltip title={title} placement="top">
+          <a href="https://twitch.tv/chand1012">
+            <Badge anchorOrigin={badgeAnchorOrigin} badgeContent={"LIVE"} color="error">
+              <StaticImage
+                className="bio-avatar"
+                layout="fixed"
+                formats={["AUTO", "WEBP", "AVIF"]}
+                src="../images/profile-pic.jpg"
+                width={50}
+                height={50}
+                quality={95}
+                alt={title}
+              />
+            </Badge>
+          </a>
+        </Tooltip>
+      );
+    }
+    return (
+      <a href="https://github.com/chand1012">
+        <StaticImage
             className="bio-avatar"
             layout="fixed"
             formats={["AUTO", "WEBP", "AVIF"]}
@@ -154,9 +190,16 @@ const Bio = () => {
             width={50}
             height={50}
             quality={95}
-            alt="Profile picture"
+            alt="Chandler Lofland"
           />
-        </a>
+      </a>
+    );
+  };
+
+  return (
+    <React.Fragment>
+      <div className="bio">
+        {BioImg()}
         {author?.name && (
           <p>
             <strong>{author.name}</strong>. <br></br>
@@ -183,4 +226,4 @@ const Bio = () => {
   )
 }
 
-export default Bio
+export default Bio;
