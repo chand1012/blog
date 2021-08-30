@@ -8,8 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
-import { Badge, Tooltip } from "@material-ui/core";
+import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 
 import { useLive } from "../services/live"
 
@@ -150,56 +149,32 @@ const Bio = () => {
     return null
   }
 
-  const BioImg = () => {
-
-    // badge anchor origin
-    const badgeAnchorOrigin = {
-      vertical: "top",
-      horizontal: "left",
-    };
-
-    const title = liveData?.title;
-
-    if (!isLoading && title) {
+  const DisplayTwitchStream = () => {
+    if (liveData?.title && !isLoading) {
+      console.log(liveData);
       return (
-        <Tooltip title={title} placement="top">
-          <a href="https://twitch.tv/chand1012">
-            <Badge anchorOrigin={badgeAnchorOrigin} badgeContent={"LIVE"} color="error">
-              <StaticImage
-                className="bio-avatar"
-                layout="fixed"
-                formats={["AUTO", "WEBP", "AVIF"]}
-                src="../images/profile-pic.jpg"
-                width={50}
-                height={50}
-                quality={95}
-                alt={title}
-              />
-            </Badge>
-          </a>
-        </Tooltip>
+        <ReactTwitchEmbedVideo width="632" height="356" layout="video" channel="chand1012" />
       );
     }
-    return (
-      <a href="https://github.com/chand1012">
-        <StaticImage
-            className="bio-avatar"
-            layout="fixed"
-            formats={["AUTO", "WEBP", "AVIF"]}
-            src="../images/profile-pic.jpg"
-            width={50}
-            height={50}
-            quality={95}
-            alt="Chandler Lofland"
-          />
-      </a>
-    );
+    return null;
   };
 
   return (
     <React.Fragment>
+      <DisplayTwitchStream />
       <div className="bio">
-        {BioImg()}
+        <a href="https://github.com/chand1012">
+          <StaticImage
+              className="bio-avatar"
+              layout="fixed"
+              formats={["AUTO", "WEBP", "AVIF"]}
+              src="../images/profile-pic.jpg"
+              width={50}
+              height={50}
+              quality={95}
+              alt="Chandler Lofland"
+            />
+        </a>
         {author?.name && (
           <p>
             <strong>{author.name}</strong>. <br></br>
