@@ -17,4 +17,6 @@ I would consider myself an intermediate Linux user. In 2019, I was a [Yocto Linu
 
 I previously documented many of my Arch Linux woes [here](/Arch-Beginners/), so I'll save you most of the trouble. In summary, the installs went smooth as they could for it being maybe my second and third times installing Arch on my Desktop and Laptop. I documented some things in the linked article that definitely would have made the install smoother had they been on the official install guide, but I still got through it with what Linux knowledge I have.
 
+One thing I didn't mention in my Arch installation article is that I originally intended to dual boot my laptop with Windows and Arch, but for some reason, it didn't want to play nice, and Windows completed borked itself. I decided to just cut my losses and get all the data I needed off the Windows partition and put it on Arch, and then wiped Windows off the drive.
+
 <!-- Write about using arch as a daily here, and about how its quite minimalist and nice to use as well as easier to maintain than ubuntu -->
