@@ -13,8 +13,7 @@ import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 import { useLive } from "../services/live"
 
 const Bio = () => {
-  const { data: liveData, isLoading } = useLive();
-
+  const { data: liveData, isLoading } = useLive()
 
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -151,13 +150,18 @@ const Bio = () => {
 
   const DisplayTwitchStream = () => {
     if (liveData?.title && !isLoading) {
-      console.log(liveData);
+      console.log(liveData)
       return (
-        <ReactTwitchEmbedVideo width="632" height="356" layout="video" channel="chand1012" />
-      );
+        <ReactTwitchEmbedVideo
+          width="632"
+          height="356"
+          layout="video"
+          channel="chand1012"
+        />
+      )
     }
-    return null;
-  };
+    return null
+  }
 
   return (
     <React.Fragment>
@@ -165,15 +169,15 @@ const Bio = () => {
       <div className="bio">
         <a href="https://github.com/chand1012">
           <StaticImage
-              className="bio-avatar"
-              layout="fixed"
-              formats={["AUTO", "WEBP", "AVIF"]}
-              src="../images/profile-pic.jpg"
-              width={50}
-              height={50}
-              quality={95}
-              alt="Chandler Lofland"
-            />
+            className="bio-avatar"
+            layout="fixed"
+            formats={["AUTO", "WEBP", "AVIF"]}
+            src="../images/profile-pic.jpg"
+            width={50}
+            height={50}
+            quality={95}
+            alt="Chandler Lofland"
+          />
         </a>
         {author?.name && (
           <p>
@@ -201,4 +205,4 @@ const Bio = () => {
   )
 }
 
-export default Bio;
+export default Bio
