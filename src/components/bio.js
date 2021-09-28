@@ -8,7 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import ReactTwitchEmbedVideo from "react-twitch-embed-video"
+import ReactPlayer from "react-player"
 
 import { useLive } from "../services/live"
 
@@ -152,11 +152,12 @@ const Bio = () => {
     if (liveData?.title && !isLoading) {
       console.log(liveData)
       return (
-        <ReactTwitchEmbedVideo
-          width="632"
-          height="356"
-          layout="video"
-          channel="chand1012"
+        <ReactPlayer
+          url={`https://twitch.tv/${liveData.user_login}`}
+          controls
+          style={{
+            marginBottom: "1rem",
+          }}
         />
       )
     }
