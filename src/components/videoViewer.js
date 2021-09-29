@@ -3,9 +3,8 @@ import * as React from "react"
 import ReactPlayer from "react-player"
 import { VscChevronLeft, VscChevronRight } from "react-icons/vsc"
 
-const BASE_URL = "https://www.youtube.com/embed/"
-
-const Viewer = ({ videoId, onClickLeft, onClickRight }) => {
+const Viewer = ({ onClickLeft, onClickRight, url }) => {
+  const arrowSize = 40
   return (
     <div
       style={{
@@ -16,11 +15,11 @@ const Viewer = ({ videoId, onClickLeft, onClickRight }) => {
       }}
     >
       <div style={{ cursor: "pointer" }} onClick={onClickLeft}>
-        <VscChevronLeft size={30} />
+        <VscChevronLeft size={arrowSize} />
       </div>
       <div>
         <ReactPlayer
-          url={BASE_URL + videoId}
+          url={url}
           controls
           style={{
             marginBottom: "1rem",
@@ -28,7 +27,7 @@ const Viewer = ({ videoId, onClickLeft, onClickRight }) => {
         />
       </div>
       <div style={{ cursor: "pointer" }} onClick={onClickRight}>
-        <VscChevronRight size={30} />
+        <VscChevronRight size={arrowSize} />
       </div>
     </div>
   )

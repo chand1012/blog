@@ -8,20 +8,20 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import ReactPlayer from "react-player"
 
 import useLive from "../services/live"
 import useYouTube from "../services/youtube"
-import Viewer from "./ytviewer"
+import Viewer from "./videoViewer"
 
 const Bio = () => {
   const { data: liveData, isLoading: liveLoading } = useLive()
   const { data: youtubeData, isLoading: youtubeLoading } = useYouTube()
-
   const [videoPos, setVideoPos] = React.useState(0)
+  const [streamSet, setStreamSet] = React.useState(false)
 
   const onClickLeft = () => {
-    if (videoPos > 0) {
+    const limit = liveData?.user_login !== undefined && !liveLoading ? -1 : 0
+    if (videoPos > limit) {
       setVideoPos(videoPos - 1)
     }
   }
@@ -30,6 +30,11 @@ const Bio = () => {
     if (videoPos < youtubeData.length - 1) {
       setVideoPos(videoPos + 1)
     }
+  }
+
+  if (!streamSet && liveData?.user_login !== undefined && !liveLoading) {
+    setStreamSet(true)
+    setVideoPos(-1)
   }
 
   const data = useStaticQuery(graphql`
@@ -166,21 +171,15 @@ const Bio = () => {
   }
 
   const DisplayVideo = () => {
-    if (liveData?.title && !liveLoading) {
-      return (
-        <ReactPlayer
-          url={`https://twitch.tv/${liveData.user_login}`}
-          controls
-          style={{
-            marginBottom: "1rem",
-          }}
-        />
-      )
-    } else if (youtubeData && !youtubeLoading) {
-      const videoId = youtubeData[videoPos].id.videoId
+    if (youtubeData && !youtubeLoading) {
+      const url =
+        videoPos > -1
+          ? `https://www.youtube.com/embed/${youtubeData[videoPos].id.videoId}`
+          : `https://twitch.tv/${liveData?.user_login}`
+
       return (
         <Viewer
-          videoId={videoId}
+          url={url}
           style={{
             marginBottom: "1rem",
           }}
@@ -194,6 +193,9 @@ const Bio = () => {
 
   return (
     <React.Fragment>
+      <div className="videoTitle">
+        <h5>My Gaming Videos</h5>
+      </div>
       <DisplayVideo />
       <div className="bio">
         <a href="https://github.com/chand1012">
