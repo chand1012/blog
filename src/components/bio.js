@@ -18,6 +18,20 @@ const Bio = () => {
   const { data: liveData, isLoading: liveLoading } = useLive()
   const { data: youtubeData, isLoading: youtubeLoading } = useYouTube()
 
+  const [videoPos, setVideoPos] = React.useState(0)
+
+  const onClickLeft = () => {
+    if (videoPos > 0) {
+      setVideoPos(videoPos - 1)
+    }
+  }
+
+  const onClickRight = () => {
+    if (videoPos < youtubeData.length - 1) {
+      setVideoPos(videoPos + 1)
+    }
+  }
+
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -162,14 +176,16 @@ const Bio = () => {
           }}
         />
       )
-    } else if (youtubeData && !liveLoading) {
-      const videoId = youtubeData[0].id.videoId
+    } else if (youtubeData && !youtubeLoading) {
+      const videoId = youtubeData[videoPos].id.videoId
       return (
         <Viewer
           videoId={videoId}
           style={{
             marginBottom: "1rem",
           }}
+          onClickLeft={onClickLeft}
+          onClickRight={onClickRight}
         />
       )
     }

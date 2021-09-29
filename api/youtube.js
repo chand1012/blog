@@ -1,6 +1,6 @@
 import fetch from "node-fetch"
 
-const url = `https://www.googleapis.com/youtube/v3/search?channelId=${process.env.CHANNEL_ID}&maxResults=10&order=date&type=video&key=${process.env.YOUTUBE_API_KEY}`
+const url = `https://www.googleapis.com/youtube/v3/search?channelId=${process.env.CHANNEL_ID}&maxResults=15&order=date&type=video&key=${process.env.YOUTUBE_API_KEY}`
 
 // get the latest video from the channel
 const getLatestVideos = async () => {
