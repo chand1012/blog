@@ -2,8 +2,8 @@ import useSWR from "swr"
 
 import fetcher from "./fetcher"
 
-const useLive = () => {
-  const { data, error } = useSWR("/api/live", fetcher)
+const useYouTube = () => {
+  const { data, error } = useSWR("/api/youtube", fetcher)
 
   return {
     data,
@@ -12,4 +12,4 @@ const useLive = () => {
   }
 }
 
-export default useLive
+export default useYouTube
