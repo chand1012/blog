@@ -10,10 +10,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import ReactPlayer from "react-player"
 
-import { useLive } from "../services/live"
+import useLive from "../services/live"
+import useYouTube from "../services/youtube"
+import Viewer from "./ytviewer"
 
 const Bio = () => {
-  const { data: liveData, isLoading } = useLive()
+  const { data: liveData, isLoading: liveLoading } = useLive()
+  const { data: youtubeData, isLoading: youtubeLoading } = useYouTube()
 
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -148,13 +151,22 @@ const Bio = () => {
     return null
   }
 
-  const DisplayTwitchStream = () => {
-    if (liveData?.title && !isLoading) {
-      console.log(liveData)
+  const DisplayVideo = () => {
+    if (liveData?.title && !liveLoading) {
       return (
         <ReactPlayer
           url={`https://twitch.tv/${liveData.user_login}`}
           controls
+          style={{
+            marginBottom: "1rem",
+          }}
+        />
+      )
+    } else if (youtubeData && !liveLoading) {
+      const videoId = youtubeData[0].id.videoId
+      return (
+        <Viewer
+          videoId={videoId}
           style={{
             marginBottom: "1rem",
           }}
@@ -166,7 +178,7 @@ const Bio = () => {
 
   return (
     <React.Fragment>
-      <DisplayTwitchStream />
+      <DisplayVideo />
       <div className="bio">
         <a href="https://github.com/chand1012">
           <StaticImage
