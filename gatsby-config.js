@@ -6,15 +6,14 @@ module.exports = {
       summary: `My blog about code and computers.`,
     },
     description: `My blog about code and computers.`,
-    siteUrl: `https://www.chand1012.dev/`,
+    siteUrl: `https://blog.chand1012.dev/`,
     social: {
       twitter: `Chand1012Dev`,
-      instagram: 'chand1012',
-      youtube: 'channel/UCRKeF9dxhScFwB4VyOqxkhQ',
-      github: 'chand1012',
-      twitch: 'chand1012',
-      devTo: 'chand1012',
-      
+      instagram: "chand1012",
+      youtube: "channel/UCRKeF9dxhScFwB4VyOqxkhQ",
+      github: "chand1012",
+      twitch: "chand1012",
+      devTo: "chand1012",
     },
   },
   plugins: [
@@ -54,10 +53,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
-              terminal: 'carbon',
-              theme: 'backboard'
-            }
-          }
+              terminal: "carbon",
+              theme: "backboard",
+            },
+          },
         ],
       },
     },
