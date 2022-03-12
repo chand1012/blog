@@ -18,9 +18,9 @@ It is very important to know the hardware that you are installing Arch Linux to.
 
 ### Required Programs
 
-As previously stated **assume nothing that you need is installed**. This includes some _really_ basic stuff, such as [`sudo`](https://wiki.archlinux.org/title/Sudo), text editors like [`nano`](https://wiki.archlinux.org/title/Nano) and [`vim`](https://wiki.archlinux.org/title/Vim) and a [DHCP Client](https://wiki.archlinux.org/title/Network_configuration#DHCP). Now whether you need `sudo` can be up for debate, however most people are going to want it so they don't have to use root all the time. The DHCP Client, usually `dhcpcd`, is also something that most users will want unless Arch is getting a static IP.
+As previously stated **assume nothing that you need is installed**. This includes some _really_ basic stuff, such as [`sudo`](https://wiki.archlinux.org/title/Sudo), text editors like [`nano`](https://wiki.archlinux.org/title/Nano) and [`vim`](https://wiki.archlinux.org/title/Vim), and a [DHCP Client](https://wiki.archlinux.org/title/Network_configuration#DHCP). Now whether you need `sudo` can be up for debate, however most people are going to want it so they don't have to use root all the time. The DHCP Client, usually `dhcpcd`, is also something that most users will want unless Arch is getting a static IP.
 
-If you want to get up and running fast, you _can_ add all the programs you'll need while you are bootstrapping the OS (what `pacstrap` does), but its not recommended. Usually I get the OS booted and connected to the internet without the installer then install the recommended packages, but you can install some programs and a desktop environment quickly otherwise.
+If you want to get up and running fast, you _can_ add all the programs you'll need while you are bootstrapping the OS (what `pacstrap` does), but its not recommended. Usually I get the OS booted and connected to the internet without the a desktop then install the recommended packages, but you can install some programs and a desktop environment quickly otherwise.
 
 [Here](https://gist.github.com/chand1012/8658d07bd6dddf0a8c561059eed45d4f) is a list of packages that I have installed on my Arch system.
 
@@ -58,7 +58,7 @@ I recommend switching Windows to use UTC instead of your respective timezone for
 
 If you are asking this question, you shouldn't be using Arch.
 
-If you've never installed a Linux system before, this may seem like a lot, but this is very normal for a Linux install. The reasons operating systems are so big is because of pre installed programs, but with Arch, this isn't a problem. A full arch install is around 2GB, compared to Ubuntu Desktop's 8GB or to Windows' 10GB. After you install a desktop and other packages required to use Arch in a productive setting, it will still only be between 3 and 4GB, depending on your chosen Desktop.
+If you've never installed a Linux system before, this may seem like a lot, but this is very normal for a Linux install. The reasons operating systems are so big is because of pre installed programs, but with Arch, this isn't a problem. A full Arch install, with a lightweight desktop and basic internet browser, is around 2GB, compared to Ubuntu Desktop's 8GB or to Windows' 10GB. After you install a desktop and other packages required to use Arch in a productive setting, it will still only be between 3 and 4GB, depending on your chosen Desktop.
 
 When I first boot, no programs start, and I use about 1GB of RAM. Compare this with my quite heavy Windows partition, where up to 10GB can be used at idle (this is mostly because Docker runs at startup and that uses a VM on Windows 10 WSL2).
 
