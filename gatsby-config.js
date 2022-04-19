@@ -2,14 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Chandler's Dev Blog`,
     author: {
-      name: `Chandler Lofland`,
+      name: `Chandler`,
       summary: `My blog about code and computers.`,
     },
     description: `My blog about code and computers.`,
     siteUrl: `https://blog.chand1012.dev/`,
     social: {
       twitter: `Chand1012Dev`,
-      instagram: "chand1012",
       youtube: "channel/UCRKeF9dxhScFwB4VyOqxkhQ",
       github: "chand1012",
       twitch: "chand1012",
