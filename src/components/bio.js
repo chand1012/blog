@@ -30,7 +30,6 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const social = {
     twitter: `Chand1012Dev`,
-    instagram: "chand1012",
     youtube: "channel/UCRKeF9dxhScFwB4VyOqxkhQ",
     github: "chand1012",
     twitch: "chand1012",
