@@ -3,12 +3,6 @@ date: "2022-04-24"
 title: Why You Should Care About Web3 and Crypto
 ---
 
-# Preamble
-
-For clarification: I use "crypto" and "web3" interchangeably. Technically they are not the same thing, but in the current state they are so tightly tied together they may as well be the same thing. 
-
-Disclaimer: I currently work for a Web3 company.
-
 # Intro
 
 Web3 is a controversial topic. I have friends and colleagues on both sides of the Web3 argument. Recently, a colleague of mine sent this tweet from Guido van Rossum, the original creator of Python.
@@ -18,6 +12,8 @@ Web3 is a controversial topic. I have friends and colleagues on both sides of th
 Was this statement a little extreme? Probably. Is this a new option? Definitely not.
 
 I'm not going to deny that Web3 and Blockchain technology has issues. Lots of them in fact! Lets start with me complaining about my most disliked of the issues with Web3. After I'm done complaining, I'll discuss currently proposed solutions to all these problems.
+
+For clarification: I use "crypto" and "web3" interchangeably. Technically they are not the same thing, but in the current state they are so tightly tied together they may as well be the same thing. 
 
 # Common Concerns
 
