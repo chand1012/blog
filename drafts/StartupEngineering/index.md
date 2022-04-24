@@ -11,13 +11,11 @@ The last bit is especially relevant. Today I was called by my boss, sort-of-not-
 
 This was the thought going through my head when reading the article a colleague sent me on best practices for the language we were using. The language we are using is similar to C++ in the sense that you can separate the declaration and implementation of the functions on a class or file. Object Oriented best practice would dictate that you should _definitely_ declare and implement your functions in separate files, either using an abstract class or some other functionality of the language. In this case, I was omitting an interface, which defined functionality that could be called by other systems in our stack. So if I knew this was best practice, why did I omit the interface?
 
-## Self Taugh Engineering
+## Self Taught Engineering
 
 I am primarily a self taught developer. I learned how code and computers worked mostly by just, doing. When I learned something new conceptually, like an algorithm, I liked implementing it myself to fully understand it. And when I do implement whatever I'm trying to replicate, I liked to keep it simple, as simple as possible. Not simple in the least amount of characters, but simple in the sense that I could read the raw code and understand what's going on quickly, regardless of the comments I left for myself (or lack thereof). And when I say "implement", I don't _just_ mean code. Flowcharts, or even just taking notes, tends to help me learn how a script, algorithm, or even a massive codebase, works.
 
-Side note, when f figure out how a large codebase works (whatever scale you may think that is), I always broke it into smaller pieces, like single bits of functionality.
-
-That being said, because I was primarily self taught by doing my own personal projects, I didn't want to take time to actual map out functionality or think about the little details. I was laser focused on the big picture of what my project does. This means that as long as the code completed the task I set for it, I didn't really care how it looked. If it got the job done, and I could understand how it worked, it was good enough. Generally I try to make my code as simple as posslbe, while still accomplishing the task at hand.
+That being said, because I was primarily self taught by doing my own personal projects, I didn't want to take time to actual map out functionality or think about the little details. I was laser focused on the big picture of what my project does. This means that as long as the code completed the task I set for it, I didn't really care how it looked. If it got the job done, and I could understand how it worked, it was good enough. Generally I try to make my code as simple as possible, while still accomplishing the task at hand.
 
 This method of simple engineering is also partially influenced by my work experience. While I have roughly 10 years of coding as a whole, I only _actually_ have 3 years of true industry experience, 2 of which have been mostly startup projects. This means that for a majority of my work experience, I have had to play the role of the "scrappy" developer, getting the features out quickly, while leaving code quality up to the linters.
 
@@ -49,7 +47,7 @@ So after taking a step back and getting off the phone, I went and corrected my m
 
 # What does this all mean?
 
-When I write code, especially when I am refactoring existing code, I need to sit back and think about why the developers made the descisions that they did, especially if the code I am working on is established working code. I also need to get out of my "startup bootstrapping" mindset and develop code as if I was at a real company, by making my code the highest quality and highest security code I've ever developed.
+When I write code, especially when I am refactoring existing code, I need to sit back and think about why the developers made the decisions that they did, especially if the code I am working on is established working code. I also need to get out of my "startup bootstrapping" mindset and develop code as if I was at a real company, by making my code the highest quality and highest security code I've ever developed.
 
 Do I consider myself a senior level developer? Maybe, depending on the company I'm working for. But this is not a company that I'm a senior developer at. This is code that is going to be
 
