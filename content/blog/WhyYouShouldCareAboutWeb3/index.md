@@ -74,4 +74,6 @@ Would any of this stop illicit transactions and criminal use of the blockchain? 
 
 # Summary
 
+So why should you care? To progress, we need to make a few mistakes first. Right now crypto and web3 are in a state not even close to ready for the mainstream, however if we continue to progress and make the technology better, it will become the standard in digital currency, along with internet freedom and privacy.
+
 Web3 is not in a state where it could be used in the mainstream. However, I believe in its future and I intend to be a pioneer in the industry, paving the way for a decentralized, democratized, and private internet future.
