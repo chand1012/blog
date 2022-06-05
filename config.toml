@@ -1,0 +1,40 @@
+baseURL = 'https://blog.chand1012.dev'
+languageCode = 'en-us'
+title = "Chandler's Dev Blog"
+theme = "terminal"
+
+[params]
+
+themeColor = "green"
+
+centerTheme = true
+
+[languages]
+[languages.en]
+languageName = "English"
+title = "Chandler's Dev Blog"
+subtitle = "My blog about code and computers."
+owner = "chand1012"
+keywords = "blog, chand1012, code, computer, programming, programming blog"
+copyright = "2022 Chandler Lofland"
+menuMore = "Show more"
+readMore = "Read more"
+readOtherPosts = "Read other posts"
+newerPosts = "Newer posts"
+olderPosts = "Older posts"
+missingContentMessage = "Page not found..."
+missingBackButtonLabel = "Back to home page"
+
+[languages.en.params.logo]
+logoText = "Chandler's Dev Blog"
+logoHomeLink = "/"
+
+[languages.en.menu]
+[[languages.en.menu.main]]
+identifier = "about"
+name = "About & Socials"
+url = "https://www.chand1012.dev"
+[[languages.en.menu.main]]
+identifier = "showcase"
+name = "Showcase"
+url = "https://www.chand1012.dev/#projects"
