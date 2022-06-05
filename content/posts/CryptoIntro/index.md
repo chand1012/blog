@@ -10,6 +10,10 @@ If this all sounds confusing, that's where I was at in January of 2022 when I wa
 
 Then I jumped down the rabbit hole of Web3. 
 
+## Would you rather listen about it?
+
+I do a small podcast with my friends and one of our first episodes had a large portion where I explained crypto! Check it out [here](https://anchor.fm/casual-coders/episodes/Chandler-Became-a-Crypto-Bro-----Casual-Coders-Podcast-7-e1d387u/a-a78joqo), skip to 20:10 for our conversation about crypto!
+
 ## What the hell is a Blockchain?
 
-The blockchain is effectively a history of transactions. There's not a number in the blockchain that tells you how many bitcoins 
+The blockchain is effectively a history of transactions. There's not a number in the blockchain that tells you how many bitcoins you own, there's a list of numbers tied to your wallet 
