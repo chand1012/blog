@@ -1,5 +1,5 @@
 ---
-date: "2022-06-12"
+date: "2022-06-10"
 title: From Crypto Dummy to Developer
 draft: true
 ---
