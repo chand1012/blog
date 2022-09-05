@@ -84,4 +84,4 @@ The interior has some wear and stains, but nothing a good detailing won't fix. N
 
 # Registration.
 
-Now this is where Carvana needs to update their site with more information on. There was no information about registration 
+Now this is where Carvana needs to update their site with more information on. There was no information about registration on their site and I had to wait 
