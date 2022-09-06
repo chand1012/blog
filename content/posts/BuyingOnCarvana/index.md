@@ -64,7 +64,7 @@ To receive your car, you have to do some paperwork. You have to sign their agree
 
 Now because this was *the largest purchase of my life* I was extremely excited and wasn't paying attention to the gritty details of the car. It came just like in the commercials, on a white flatbed truck.
 
-<!--Insert snapchat here-->
+![](./car.jpg)
 
 The driver handed me the keys and allowed me to take the car around the block before finalizing the the paperwork. I *loved* how this car rode and drove, but we'll get to that later. I came home and filled out the little bit of paperwork, as well as providing him with proof of insurance as well as a picture of myself with my driver's license. 
 
@@ -72,7 +72,7 @@ He mentioned I have 7 days to decide on if I'm keeping the car, if not I give it
 
 # The car itself.
 
-<!--Picture of car-->
+![](./PXL_20220630_210410624.jpg)
 
 I knew after only 2 days I was keeping it. While it has 67k miles, *its a Toyota*.
 
@@ -80,8 +80,12 @@ The driving experience is *much* better than my SUV. It rides very similar to my
 
 ## It isn't perfect.
 
-The interior has some wear and stains, but nothing a good detailing won't fix. Now there was some damage on the vehicle that Carvana did not mention, and I assume was overlooked. The vehicle had some scratches on the bottom of the bumper where it looks like someone may have curbed the vehicle, as well as a hanging trip piece on the driver's side, with that same trim piece missing entirely from the passenger side. Carvana said they will fix the issues since they were not documented on the site. 
+The interior has some wear and stains, but nothing a good detailing won't fix. Now there was some damage on the vehicle that Carvana did not mention, and I assume was overlooked. The vehicle had some scratches on the bottom of the bumper where it looks like someone may have curbed the vehicle, as well as a hanging trip piece on the driver's side, with that same trim piece missing entirely from the passenger side.
 
 # Registration.
 
-Now this is where Carvana needs to update their site with more information on. There was no information about registration on their site and I had to wait 
+Now this is where Carvana needs to update their site with more information on. There was no information about registration on their site and I had to wait until they emailed me about it. I opted to have my plates transferred rather than get new ones since I'm not a fan of my state's new plates. There was delay after delay, and I ended up getting my registration only days before my temporary tags expired. Apparently this is a common issue, and during the pandemic there were reports that people may have owned their cars for [well over a year](https://www.autoblog.com/2021/11/29/carvana-complaints-registration/) before Carvana would send them their registration. Luckily I got mine just in time.
+
+# Conclusion
+
+Carvana was a convenient way to buy a car, but they definitely have some kinks to work out. If you find a car that you really like on Carvana I say give it a shot, but its definitely not replacing a dealer anytime soon.
