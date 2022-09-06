@@ -1,6 +1,6 @@
 +++
 title = "Buying a Car on Carvana"
-date = "2022-07-07T08:41:10-04:00"
+date = "2022-09-06T17:32:10-04:00"
 author = ""
 authorTwitter = "" #do not include @
 cover = ""
