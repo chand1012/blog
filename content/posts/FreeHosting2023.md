@@ -49,7 +49,7 @@ Unliked Vercel, Cloudflare Pages is free for as many developers you want with as
 
 ### [Fly.io](https://fly.io/)
 
-Heroku free tier is dead. [Fly.io](http://Fly.io) is here to pick up the pieces. 
+Heroku free tier is dead. [Fly.io](https://fly.io) is here to pick up the pieces. 
 
 Fly.io is a public cloud platform that is built on top of bare-metal servers in data centers around the world. The platform is designed to make it easy for developers to deploy distributed and real-time apps close to their users, no matter where they are. The goal of Fly.io is to deliver applications with the highest possible availability and the lowest possible latency, all while providing a great developer experience.
 
