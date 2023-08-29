@@ -81,18 +81,22 @@ make LLAMA_CLBLAST=1
 
 # Getting Weights
 
-Meta did not officially release GGML weights for Llama 2, however a community member, [TheBlokeAI](https://twitter.com/TheBlokeAI), released GGML formatted weights on [his HuggingFace page](https://huggingface.co/TheBloke). Here is all the ones he released.
+~~Meta did not officially release GGML weights for Llama 2, however a community member, [TheBlokeAI](https://twitter.com/TheBlokeAI), released GGML formatted weights on [his HuggingFace page](https://huggingface.co/TheBloke). Here is all the ones he released.~~
+
+EDIT: As of 08/28/2023, these no longer work. See my edits below.
 
 | Size | Original | Chat |
 | --- | --- | --- |
 | 7B | [Link](https://huggingface.co/TheBloke/Llama-2-7B-GGML) | [Link](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML) |
 | 13B | [Link](https://huggingface.co/TheBloke/Llama-2-13B-GGML) | [Link](https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML) |
 
-No 70B parameter GGML model weights are available yet, however 7B and 13B are more than enough to experiment with!
+~~No 70B parameter GGML model weights are available yet, however 7B and 13B are more than enough to experiment with!~~
+
+Edit: About a month after publishing this article, these weights no longer work! As of this edit, TheBloke has not updated the original weights to be the new GGUF format (which promises to be faster, smaller, and with less hallucinations). You can either revert back to the [last commit that supports GGML](https://github.com/ggerganov/llama.cpp/tree/dadbed99e65252d79f81101a392d0d6497b86caa), or you can see [here](https://huggingface.co/models?sort=trending&search=gguf) for a list of GGUF models on Hugging Face. The only one that I have tested and have confirmed to work is [Llama 2 Chat by Substratus AI](https://huggingface.co/substratusai/Llama-2-13B-chat-GGUF). I have updated my guide below to use the confirmed working model.
 
 ## Weight Types
 
-You’ll notice that the files for those models have a lot of options, all ending in `.bin` with things like `.q4_0` and `q3_K_M` thrown in. Those are the different [quantization methods](https://github.com/ggerganov/llama.cpp#quantization) available for the models. Quantization is the process of reducing the number of bits used by the models, reducing size and memory use. You should experiment with each one and figure out which fits your use case the best, but for my demo above I used `[llama-2-13b-chat.ggmlv3.q4_1.bin](https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML/blob/main/llama-2-13b-chat.ggmlv3.q4_1.bin)` .
+You’ll notice that the files for those models have a lot of options, all ending in `.bin` with things like `.q4_0` and `q3_K_M` thrown in. Those are the different [quantization methods](https://github.com/ggerganov/llama.cpp#quantization) available for the models. Quantization is the process of reducing the number of bits used by the models, reducing size and memory use. You should experiment with each one and figure out which fits your use case the best, but for my demo above I used [`llama-2-13b-chat.ggmlv3.q4_1.bin`](https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML/blob/main/llama-2-13b-chat.ggmlv3.q4_1.bin) (which is no longer supported. See above).
 
 # Running the Models
 
@@ -101,14 +105,14 @@ Once you have the weights downloaded, you should move them near the llama.cpp di
 ```bash
 mkdir models
 cd models
-wget https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML/resolve/main/llama-2-13b-chat.ggmlv3.q4_1.bin
+wget https://huggingface.co/substratusai/Llama-2-13B-chat-GGUF/resolve/main/model.bin -O model.q4_k_s.gguf
 cd ..
 ```
 
 Once that is complete, you can run the model on CPU with the following:
 
 ```bash
-./main -t 10 -m ./models/llama-2-13b-chat.ggmlv3.q4_1.bin --color -c 4096 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "### Instruction: Write a story about llamas\n### Response:"
+./main -t 10 -m ./models/model.q4_k_s.gguf --color -c 4096 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "### Instruction: Write a story about llamas\n### Response:"
 ```
 
 You should change `10` to the number of physical cores you system has. For example, if you have a 8 core system with 16 threads, you should set the number to 8.
@@ -120,17 +124,17 @@ There will be a warning that pops up saying that the model doesn’t support mor
 ### MacOS via Metal
 
 ```bash
-./main -ngl 1 -n 128 -m ./models/llama-2-13b-chat.ggmlv3.q4_1.bin --color -c 500 -b 192 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "### Instruction: Write me a Python program that takes in user input and greets the user with their name.\n### Response:"
+./main -ngl 1 -n 128 -m ./models/model.q4_k_s.gguf --color -c 500 -b 192 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "### Instruction: Write me a Python program that takes in user input and greets the user with their name.\n### Response:"
 ```
 
-Notice that I changed the number after `-c` from `4096` to `500` . I was running out of memory running on my Mac’s GPU, decreasing context size is the easiest way to decrease memory use.
+Notice that I changed the number after `-c` from `4096` to `500`. I was running out of memory running on my Mac’s GPU, decreasing context size is the easiest way to decrease memory use.
 
 ### Linux via CUDA
 
 If you want to fully offload to GPU, set the `-ngl` value to an extremely high number.
 
 ```bash
-./main -ngl 15000 -n 128 -m ./models/llama-2-13b-chat.ggmlv3.q4_1.bin --color -c 500 -b 192 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "### Instruction: Write me a Python program that takes in user input and greets the user with their name.\n### Response:"
+./main -ngl 15000 -n 128 -m ./models/model.q4_k_s.gguf --color -c 500 -b 192 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "### Instruction: Write me a Python program that takes in user input and greets the user with their name.\n### Response:"
 ```
 
 You can experiment with much lower numbers and increase until your GPU runs out of VRAM.
