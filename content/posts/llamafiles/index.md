@@ -1,6 +1,6 @@
 +++
 title = "Llamafile: AI Integration & Deployment Made Easy"
-date = "2023-12-13:31:00-05:00"
+date = 2023-12-13T15:31:00-05:00
 author = ""
 authorTwitter = "Chand1012Dev" #do not include @
 cover = "cover.jpeg"
@@ -16,7 +16,7 @@ Its no secret that I think Llama 2 and its derivatives are the future of AI and 
 
 However, the problem with llama.cpp is that to get it working you have to have all the dependencies, either download a binary or clone and build the repo, make sure your drivers are working, and then you can finally run it. What if you just want to download the model and run it? Well, that's where Llamafiles comes in.
 
-[Llamafile](https://github.com/Mozilla-Ocho/llamafile) is a project by a team over at Mozilla. It allows users to distribute and run LLMs using a single, platform-independent file. It accomplishes this by building all required code into a binary called `llamafile` , then by using a zipping tool, you can combine the binary with the model and any other files you need. This allows you to run Llama 2, Mistral 7B, on anything, without having to have <small>most</small> dependencies.
+[Llamafile](https://github.com/Mozilla-Ocho/llamafile) is a project by a team over at Mozilla. It allows users to distribute and run LLMs using a single, platform-independent file. It accomplishes this by building all required code into a binary called `llamafile` , then by using a zipping tool, you can combine the binary with the model and any other files you need. This allows you to run Llama 2, Mistral 7B, on anything, without having to have *most* dependencies.
 
 Llamefiles come in two flavors: Main and Server. Main replicates the command-line interface of [llama.cpp](https://github.com/ggerganov/llama.cpp), while Server is a server that can be used to run Llama 2 and other models over HTTP with a basic but functional web interface. I'll be focusing on the Servers, as that's what I prefer to use, but the process is the same for both.
 
